@@ -1,0 +1,156 @@
+:root {
+	--height-header: 60px;
+	--height-todolist: 80%;
+	--height-todolist-header: 30px;
+
+	--width-todolist: 80%;
+
+	--color-tan: #e6e2d3;
+	--color-red-button: #c94c4c;
+	--color-green: #4caf50;
+    --color-blue:#008cba;
+    --color-white:#f0f0f0;
+
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	user-select: none;
+}
+
+html,
+body {
+	width: 100vw;
+	height: 100vh;
+}
+
+.content {
+	width: 100%;
+	height: 100%;
+	/* padding-top: var(--height-header); */
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.todolist {
+	height: var(--height-todolist);
+	width: var(--width-todolist);
+}
+
+.todolist__header,
+ul li {
+	text-transform: capitalize;
+	font-size: 1rem;
+	letter-spacing: 2px;
+
+	width: 100%;
+	height: var(--height-todolist-header);
+	line-height: var(--height-todolist-header);
+
+	border: none;
+	outline: none;
+	list-style: none;
+	padding-left: 10px;
+}
+.todolist__header {
+	text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.todolist__input{
+    width: 15%;
+    padding: 5px 10px;
+    font-size: 12px;
+}
+
+.submit{
+  background-color: #008cba;
+  border: 5px;
+  color: white;
+  padding: 7px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin-left: 10px;
+  border-radius: 5%;
+}
+
+.container{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+    height: 100%;
+}
+.todolist_container{
+    width:45%;
+    height: 100%;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+    border: 1px;
+}
+
+ul li {
+	display: flex;
+	justify-content: space-between;
+    border-radius: 3px;
+    border:5px;
+    background-color: #e6e2d3;
+    margin-bottom: 10px;
+    font-size: 16px;
+    height: 10%;
+}
+
+button:hover {
+	opacity: 0.85;
+}
+ul {
+	height: calc(
+		var(--height-todolist) - var(--height-todolist-header) * 2
+	);
+	overflow: auto;
+}
+ul li span {
+	overflow: hidden;
+    align-self: center;
+}
+
+.container h3{
+    padding:10px;
+}
+
+.button_collection{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.btn
+{
+    width: 35px;
+    height: 60%;
+    border:none;
+    border-radius: 2px;
+    margin-right: 10px;
+}
+.edit-btn{
+    background-color: #008cba;
+}
+.delete-btn{
+    background-color: #c94c4c;
+}
+.check-btn{
+    background-color: #4caf50;
+}
+.btn svg 
+{
+padding:2px;
+width: 100%;
+height: 100%;
+fill: white;
+fill-opacity: 0.8;
+}
